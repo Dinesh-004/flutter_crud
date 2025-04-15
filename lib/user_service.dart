@@ -17,9 +17,15 @@ class UserService {
     await usersCollection.doc(user.id).set(user.toMap());
   }
 
+  Future<void> updateUser(UserModel user) async {
+    await usersCollection.doc(user.id).update(user.toMap());
+  }
+
   Future<List<UserModel>> getAllUsers() async {
     final query = await usersCollection.get();
-    return query.docs.map((doc) => UserModel.fromMap(doc.data() as Map<String, dynamic>)).toList();
+    return query.docs
+        .map((doc) => UserModel.fromMap(doc.data() as Map<String, dynamic>))
+        .toList();
   }
 
   Future<void> deleteUser(String id) async {
