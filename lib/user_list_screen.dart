@@ -13,6 +13,7 @@ class UserListScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Users'),
+        backgroundColor: Colors.grey[900],
         actions: [
           IconButton(
             icon: Icon(Icons.add),

@@ -28,7 +28,10 @@ class _UpdateUserScreenState extends ConsumerState<UpdateUserScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Update User')),
+      appBar: AppBar(
+        title: Text('Update User'),
+        backgroundColor: Colors.grey[900],
+      ),
       body: Padding(
         padding: EdgeInsets.all(16),
         child: Form(
