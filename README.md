@@ -1,3 +1,3 @@
 # flutter_crud
 
-A new Flutter project.
+A new Flutter CRUD project.
